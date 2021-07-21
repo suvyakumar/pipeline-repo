@@ -1,7 +1,6 @@
 pipeline {
 			agent any  
 			stages {
-				
 				stages('BUILD') {
 					parallel{
 						stage('BUILD1') {
@@ -21,8 +20,7 @@ pipeline {
 							echo This is the fist stage: BUILD
 						'''
 					}	
-				}
-				
+				}				
 				stage('TEST') {
 					
 					steps {
@@ -32,8 +30,7 @@ pipeline {
 							echo This is the fist stage: TEST
 						'''
 					}	
-				}
-				
+				}				
 				stage('DEPLOY') {
 					
 					steps {
