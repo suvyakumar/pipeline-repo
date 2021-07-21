@@ -1,19 +1,27 @@
 pipeline {
-			agent none  
+			agent any  
 			stages {
-				stage('BUILD') {
-					parallel{
-						stage('BUILD1') {
-							agent {label 'label1'}
+				stage('STAGE1') {						
 					         steps {
 						sh '''
 							pwd
 							sleep 5
-							echo This is the fist stage: BUILD
+							exit 1
 						'''
-					}	
-				}
-						stage('BUILD2') {
+						 }	
+				           }
+				stage('STAGE2') {						
+					         steps {
+						sh '''
+							echo stage2 is building
+							sleep 5
+							
+						'''
+						 }	
+				           }
+			}
+}
+						/*stage('BUILD2') {
 							agent {label 'label2'}
 					         steps {
 						sh '''
@@ -46,7 +54,7 @@ pipeline {
 			}
 		}
 }
-}
+} */
 
 
 
