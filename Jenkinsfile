@@ -28,7 +28,13 @@ pipeline {
 								   }
 							   }
 						   }
+							   post {
+								   always {
+									   echo "you can always see me:"
+								   }
+							   }
 						   }
+						   
 
 
 
