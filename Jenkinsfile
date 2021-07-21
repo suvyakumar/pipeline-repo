@@ -3,7 +3,7 @@ pipeline {
 			stages {
 				stage('STAGE1') {	
 					when {
-						branch 'master' 
+						branch 'main' 
 					}
 					         steps {
 							sh '''
