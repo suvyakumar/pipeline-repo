@@ -11,6 +11,7 @@ pipeline {
 						'''
 						 }	
 				           }
+				}
 				stage('STAGE2') {						
 					         steps {
 						sh '''
