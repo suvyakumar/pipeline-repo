@@ -3,7 +3,7 @@ pipeline {
 			stages {
 				stage('STAGE1') {						
 					         steps {
-							 catchError{buildResult="SUCCESS",stageResult="FAILURE"}
+							 catchError(buildResult="SUCCESS",stageResult="FAILURE") {
 						sh '''
 							pwd
 							sleep 5
