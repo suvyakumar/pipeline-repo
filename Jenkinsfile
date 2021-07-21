@@ -23,6 +23,8 @@ pipeline {
 				           }
 			}
 }
+
+
 						/*stage('BUILD2') {
 							agent {label 'label2'}
 					         steps {
