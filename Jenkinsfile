@@ -1,9 +1,10 @@
 pipeline {
-			agent any  
+			agent none  
 			stages {
 				stage('BUILD') {
 					parallel{
 						stage('BUILD1') {
+							agent {label 'label1'}
 					         steps {
 						sh '''
 							pwd
@@ -13,6 +14,7 @@ pipeline {
 					}	
 				}
 						stage('BUILD2') {
+							agent {label 'label2'}
 					         steps {
 						sh '''
 							pwd
