@@ -24,7 +24,7 @@ pipeline {
 					}	
 				}				
 				stage('TEST') {
-					
+					agent any
 					steps {
 						sh '''
 							pwd
@@ -34,7 +34,7 @@ pipeline {
 					}	
 				}				
 				stage('DEPLOY') {
-					
+					agent any
 					steps {
 						sh '''
 							pwd
