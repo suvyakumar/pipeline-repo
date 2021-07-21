@@ -1,6 +1,7 @@
 pipeline {
-			agent { label 'label1' }  
+			agent any  
 			stages {
+				pipeline{
 				stage('BUILD') {
 					steps {
 						sh '''
@@ -34,6 +35,7 @@ pipeline {
 				}
 			}
 		}
+}
 
 
 
