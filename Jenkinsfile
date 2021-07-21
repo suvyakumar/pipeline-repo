@@ -1,9 +1,20 @@
 pipeline {
 			agent any  
 			stages {
-				parallel{
-				stage('BUILD') {
-					steps {
+				
+				stages('BUILD') {
+					parallel{
+						stage('BUILD1') {
+					         steps {
+						sh '''
+							pwd
+							sleep 5
+							echo This is the fist stage: BUILD
+						'''
+					}	
+				}
+						stage('BUILD2') {
+					         steps {
 						sh '''
 							pwd
 							sleep 5
